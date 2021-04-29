@@ -1,6 +1,8 @@
+/*construct returns an object 
+which has name, values as properties*/
 function construct(Class) {
-    let that = new Class;
-    that.name = 'John';
-    that.values = [1, 2, 3, 4, 5];
-    return that;
-  }
+  let object = new Class;
+  object.name = 'John';
+  object.values = [1, 2, 3, 4, 5];
+  return object;
+}
