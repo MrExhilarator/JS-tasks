@@ -1,5 +1,7 @@
-function countWords(str) {
-    str = str.trim();
-    if (str === '') return 0;
-    return str.split(/\s+/).length;
+/*countWords returns the number of 
+words in a string*/
+function countWords(string) {
+    string = string.trim();
+    if (string === '') return 0;
+    return string.split(/\s+/).length;
 }

@@ -1,58 +1,64 @@
+/*zero to nine functions return the calculated arithmetic operation value
+if 1st argument is an operator else returns the number*/
 function zero(a) {
-  if(arguments[0]) return Math.floor(answer("0",a[0],a[1]))
-  else return 0
+  return arguments[0] ? Math.floor(getArithmeticOpValue(0, a[0], a[1])) : 0;
 }
 function one(a) {
-   if(arguments[0]) return Math.floor(answer("1",a[0],a[1]))
-  else return 1
+  return arguments[0] ? Math.floor(getArithmeticOpValue(1, a[0], a[1])) : 1;
 }
 function two(a) {
-   if(arguments[0]) return Math.floor(answer("2",a[0],a[1]))
-  else return 2
+  return arguments[0] ? Math.floor(getArithmeticOpValue(2, a[0], a[1])) : 2;
 }
 function three(a) {
-   if(arguments[0]) return Math.floor(answer("3",a[0],a[1]))
-  else return 3
+  return arguments[0] ? Math.floor(getArithmeticOpValue(3, a[0], a[1])) : 3;
 }
 function four(a) {
-   if(arguments[0]) return Math.floor(answer("4",a[0],a[1]))
-  else return 4
+  return arguments[0] ? Math.floor(getArithmeticOpValue(4, a[0], a[1])) : 4;
 }
 function five(a) {
-   if(arguments[0]) return Math.floor(answer("5",a[0],a[1]))
-  else return 5
+  return arguments[0] ? Math.floor(getArithmeticOpValue(5, a[0], a[1])) : 5;
 }
 function six(a) {
-   if(arguments[0]) return Math.floor(answer("6",a[0],a[1]))
-  else return 6
+  return arguments[0] ? Math.floor(getArithmeticOpValue(6, a[0], a[1])) : 6;
 }
 function seven(a) {
-   if(arguments[0]) return Math.floor(answer("7",a[0],a[1]))
-  else return 7
+  return arguments[0] ? Math.floor(getArithmeticOpValue(7, a[0], a[1])) : 7;
 }
 function eight(a) {
-   if(arguments[0]) return Math.floor(answer("8",a[0],a[1]))
-  else return 8
+  return arguments[0] ? Math.floor(getArithmeticOpValue(8, a[0], a[1])) : 8;
 }
 function nine(a) {
-   if(arguments[0]) return Math.floor(answer("9",a[0],a[1]))
-  else return 9
+  return arguments[0] ? Math.floor(getArithmeticOpValue(9, a[0], a[1])) : 9;
 }
 
- 
-
-function answer(a,b,c){
-  if(b=="+") return parseInt(a)+parseInt(c);
-   if(b=="-") return parseInt(a)-parseInt(c);
-   if(b=="*") return parseInt(a)*parseInt(c);
-   if(b=="/") return parseInt(a)/parseInt(c);
-  
+/*getArithmeticOpValue returns the value of arithmetic operation
+performed between given two values based on the given operator*/
+function getArithmeticOpValue(value1, operator, value2) {
+  if (operator == "+") {
+    return value1 + value2;
+  }
+  if (operator == "-") {
+    return value1 - value2;
+  }
+  if (operator == "*") {
+    return value1 * value2;
+  }
+  if (operator == "/") {
+    return value1 / value2;
+  }
 }
 
- 
-
-
-function plus(a) { return ["+",a]}
-function minus(a) {return ["-",a]}
-function times(a) {return ["*",a]}
-function dividedBy(a) { return ["/",a]}
+/*plus, minus, times, dividedBy returns an array with 
+respective arithmetic operation and passed arguments as elements*/
+function plus(a) {
+  return ["+", a];
+}
+function minus(a) {
+  return ["-", a];
+}
+function times(a) {
+  return ["*", a];
+}
+function dividedBy(a) {
+  return ["/", a];
+}
