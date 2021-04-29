@@ -1,10 +1,10 @@
+/*createSecretHolder accepts any value as secret and returns an object with two 
+methods getSecret() which returns the secret and setSecret() which sets the secret*/
 function createSecretHolder(secret) {
-    return{
-      getSecret : function(){
-        return secret;
-      },
-      setSecret : function(value){
-        secret = value;
-      }
+  return {
+    getSecret: () => secret,
+    setSecret: function (value) {
+      secret = value;
     }
+  }
 }
