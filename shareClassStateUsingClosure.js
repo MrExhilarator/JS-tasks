@@ -15,8 +15,6 @@ var Cat = (function () {
     });
     cats.push(this);
   };
-  constructor.averageWeight = function () {
-    return cats.reduce(function (sum, cat) { return sum + cat.weight }, 0) / cats.length;
-  };
+  constructor.averageWeight = () => cats.reduce(function (sum, cat) { return sum + cat.weight }, 0) / cats.length;
   return constructor;
 }());
